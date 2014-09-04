@@ -10,6 +10,14 @@ Dockerfile to set up a Couchpotato container
 
     docker run -d -p 5050:5050 -v <LOCAL_MOVIES_FOLDER>:/movies --name couchpotato apps/couchpotato
 
+## Known Problems
+
+As CouchPotato routinely updates itself, the Docker container will stop to run after an update. This is because CouchPotato restarts itself in the process and a Docker container stops once the initially running process ends. When that happends, you need to restart the container with
+
+    docker start couchpotato
+
+I'm going to change this as soon as I find an elegant solution.
+
 ## License
 
 This is free and unencumbered software released into the public domain.
