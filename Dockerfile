@@ -23,4 +23,4 @@ EXPOSE 5050
 WORKDIR /opt
 
 ## Run Couchpotato
-ENTRYPOINT python CouchPotatoServer/CouchPotato.py
+ENTRYPOINT ["python", "CouchPotatoServer/CouchPotato.py"]
