@@ -18,7 +18,7 @@ As CouchPotato routinely updates itself, the Docker container will stop to run a
 
 Starting with Docker 1.3, you can now use the `--restart=always` flag to let Docker handle the automatic restart of the container.
 
-    docker run -d -p 5050:5050 -v <LOCAL_MOVIES_FOLDER>:/movies --name couchpotato apps/couchpotato --restart=always
+    docker run -d -p 5050:5050 -v <LOCAL_MOVIES_FOLDER>:/movies --restart=always --name couchpotato apps/couchpotato
 
 Thanks to Ashex1 for the hint!
 
