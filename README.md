@@ -1,6 +1,6 @@
 # docker-couchpotato
 
-Dockerfile to set up a Couchpotato container
+Dockerfile to set up a Couchpotato container (based on CentOS 7)
 
 ## Build
 

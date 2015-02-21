@@ -1,16 +1,14 @@
 ## Base image to use
-FROM ubuntu:14.04
+FROM centos:centos7
 
 ## Maintainer info
-MAINTAINER razorgirl <https://github.com/razorgirl>
+MAINTAINER mchlumsky <martin.chlumsky@gmail.com>
 
 ## Update base image
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get dist-upgrade -y
+RUN yum update -y
 
 ## Install prerequisites
-RUN apt-get install -y python git-core
+RUN yum install -y git
 
 ## Install Couchpotato
 RUN cd /opt && \
