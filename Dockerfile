@@ -1,19 +1,16 @@
 ## Base image to use
-FROM ubuntu:14.04
+FROM alpine
 
 ## Maintainer info
 MAINTAINER razorgirl <https://github.com/razorgirl>
 
-## Update base image
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get dist-upgrade -y
-
-## Install prerequisites
-RUN apt-get install -y python git-core
+## Update base image and install prerequisites
+RUN apk add --update git python && \
+  rm -rf /var/cache/apk/*
 
 ## Install Couchpotato
-RUN cd /opt && \
+RUN mkdir /opt && \
+  cd /opt && \
   git clone https://github.com/RuudBurger/CouchPotatoServer.git
 
 ## Expose port
