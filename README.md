@@ -4,7 +4,7 @@ Dockerfile to set up a Couchpotato container
 
 ## Build
 
-    docker build --tag razorgirl/couchpotato .
+    docker build --tag razorgirl/couchpotato git@github.com:razorgirl/docker-couchpotato.git
 
 ## Run
 
