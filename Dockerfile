@@ -4,6 +4,9 @@ FROM alpine
 ## Maintainer info
 MAINTAINER razorgirl <https://github.com/razorgirl>
 
+# set python to use utf-8 rather than ascii.
+ENV PYTHONIOENCODING="UTF-8"
+
 ## Update base image and install prerequisites
 RUN apk add --update git python && \
   rm -rf /var/cache/apk/*
